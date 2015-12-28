@@ -1,0 +1,16 @@
+[user]
+	name = wilzh40
+	email = wilzh40@gmail.com
+[filter "media"]
+	clean = git-media-clean %f
+	smudge = git-media-smudge %f
+[push]
+	default = simple
+[core]
+	excludesfile = /Users/wilsonzhao/.gitignore
+[alias]
+    test = "!gi() { curl http://www.gitignore.io/api/$@ ;}; gi"
+    lol = log --graph --pretty=format:'%C(yellow)%h%Creset %an: %s - %Creset %C(yellow)%d%Creset %Cblue(%cr)%Creset' --abbrev-commit --date=relative
+    lola = log --graph --pretty=format:'%C(yellow)%h%Creset %an: %s - %Creset %C(yellow)%d%Creset %Cblue(%cr)%Creset' --abbrev-commit --date=relative --all
+[url "https://"]
+	insteadOf = git://
