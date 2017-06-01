@@ -1,4 +1,5 @@
 # Path to your oh-my-zsh installation.
+export TERM="xterm-256color"
 export NVM_DIR="/Users/wilsonzhao/.nvm"
 export GOPATH=$HOME/.go
 # Antigen Configuration
