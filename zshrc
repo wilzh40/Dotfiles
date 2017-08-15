@@ -11,6 +11,8 @@ alias ccs='ssh -X wyz@clam.club.cc.cmu.edu'
 alias synct="rsync -rvzuSP --remove-source-files do1:~/Downloads ~/Downloads/Remote"
 
 alias gccs="gcc -g -Wall -Wextra -Werror -Wshadow -std=c99 -pedantic"
+alias s="grep -rnIi --color"
+alias v="vim"
 # Load the oh-my-zsh's library.
 antigen use oh-my-zsh
 
@@ -38,3 +40,11 @@ export ZSH=$HOME/.oh-my-zsh
 # Tell antigen that you're done.
 antigen apply
 export PATH="/usr/local/sbin:$PATH"
+
+# expo/universe
+eval "$(direnv hook zsh)"
+alias nahcroix="ssh -i ~/nahcroix.pem ec2-user@ec2-54-161-226-173.compute-1.amazonaws.com"
+
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"

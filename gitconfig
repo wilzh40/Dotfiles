@@ -6,11 +6,17 @@
 	smudge = git-media-smudge %f
 [push]
 	default = simple
+[pull]
+  rebase = true
 [core]
 	excludesfile = /Users/wilsonzhao/.gitignore
+	editor = /usr/bin/vim
 [alias]
     test = "!gi() { curl http://www.gitignore.io/api/$@ ;}; gi"
+    wip = commit -am "WIP" --no-verify
     lol = log --graph --pretty=format:'%C(yellow)%h%Creset %an: %s - %Creset %C(yellow)%d%Creset %Cblue(%cr)%Creset' --abbrev-commit --date=relative
     lola = log --graph --pretty=format:'%C(yellow)%h%Creset %an: %s - %Creset %C(yellow)%d%Creset %Cblue(%cr)%Creset' --abbrev-commit --date=relative --all
 [url "https://"]
 	insteadOf = git://
+[url "git@github.com:"]
+	insteadOf = https://github.com/
